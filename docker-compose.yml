@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  moana-api:
+    build: ./movie-analyst-api
+    image: ${moana-api-img}
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - BD_NAME=${DB_NAME}
+    env_file:
+      - .env
+    restart: always
+    container_name: APIo
+    ports:
+            - "3000:3000"
+  moana-ui:
+    build: ./movie-analyst-ui
+    image: ${moana-ui-img}
+    environment:
+      - BACKEND_URL=${BACKEND_URL}
+    container_name: urqUIza
+    env_file:
+      - .env
+    ports:
+            - "8000:8000"
