@@ -1,7 +1,6 @@
 version: '3.3'
 services:
   moana-api:
-    build: ./movie-analyst-api
     image: ${moana-api-img}
     environment:
       - DB_HOST=${DB_HOST}
@@ -15,7 +14,6 @@ services:
     ports:
             - "3000:3000"
   moana-ui:
-    build: ./movie-analyst-ui
     image: ${moana-ui-img}
     environment:
       - BACKEND_URL=${BACKEND_URL}
