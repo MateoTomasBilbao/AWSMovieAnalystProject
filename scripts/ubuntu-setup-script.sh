@@ -13,7 +13,7 @@ sudo usermod -aG docker ubuntu
 curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
-sudo git clone https://github.com/MateoTomasBilbao/AWSMovieAnalyst.git
+sudo git clone https://github.com/MateoTomasBilbao/AWSMovieAnalystProject.git
 
 docker run --name APIo -p 3000:3000 alvamateo/apialvarov3
 docker run --name urqUIza -p 8000:8000 alvamateo/uialvarov3
