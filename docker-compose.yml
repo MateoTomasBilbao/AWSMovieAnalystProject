@@ -26,6 +26,7 @@ services:
             - "8000:8000"
     restart: always
   mpana-db:
+    build: ./movie-analyst-bbdd
     image: ${moana-db-img}
     container_name: DeBuelto
     environment:
