@@ -16,7 +16,7 @@ services:
   moana-ui:
     image: ${moana-ui-img}
     environment:
-      - BACKEND_URL=${BACKEND_URL}
+      - "BACKEND_URL=${BACKEND_URL}:3000"
     container_name: urqUIza
     env_file:
       - .env
