@@ -24,9 +24,10 @@ services:
       - .env
     ports:
             - "8000:8000"
-  mysql:
-    image: mysql:5.7
-    container_name: mysql
+    restart: always
+  mpana-db:
+    image: ${moana-db-img}
+    container_name: DeBuelto
     environment:
       - MYSQL_ROOT_PASSWORD=$(MYSQL_ROOT_PASSWORD)
       - MYSQL_NAME=$(MYSQL_NAME)
