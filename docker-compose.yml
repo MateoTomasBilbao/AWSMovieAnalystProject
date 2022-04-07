@@ -25,13 +25,13 @@ services:
     ports:
             - "8000:8000"
     restart: always
-  mpana-db:
+  moana-db:
     build: ./movie-analyst-bbdd
     image: ${moana-db-img}
     container_name: DeBuelto
     environment:
-      - MYSQL_ROOT_PASSWORD=$(MYSQL_ROOT_PASSWORD)
-      - MYSQL_NAME=$(MYSQL_NAME)
+      - MYSQL_ROOT_PASSWORD=$$(MYSQL_ROOT_PASSWORD)
+      - MYSQL_NAME=$$(MYSQL_NAME)
     ports:
       - "3306:3306"
     env_file:
